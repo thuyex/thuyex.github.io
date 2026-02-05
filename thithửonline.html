@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Không Gian Luyện Thi</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Montserrat',sans-serif;scroll-behavior:smooth}
+body{background:linear-gradient(160deg,#fff7ed,#fde68a,#fbcfe8);color:#1f2937}
+
+/* SIDEBAR */
+.sidebar{position:fixed;left:0;top:0;width:220px;height:100%;background:linear-gradient(180deg,#fb7185,#f97316);padding:30px 20px;color:white;box-shadow:5px 0 25px rgba(0,0,0,0.15)}
+.sidebar h2{font-size:22px;margin-bottom:30px;font-weight:800}
+.sidebar a{display:block;text-decoration:none;color:white;margin:12px 0;padding:10px 12px;border-radius:12px;transition:0.3s}
+.sidebar a:hover{background:rgba(255,255,255,0.25);transform:translateX(5px)}
+
+/* MAIN */
+.main{margin-left:240px;padding:30px}
+
+/* BANNER */
+.banner{background:linear-gradient(120deg,#34d399,#22d3ee);padding:40px;border-radius:30px;color:white;box-shadow:0 15px 40px rgba(0,0,0,0.2)}
+.banner h1{font-size:40px;font-weight:800}
+.banner p{margin-top:10px;font-size:18px}
+
+/* INTRO */
+.intro{margin-top:30px;background:white;padding:30px;border-radius:25px;box-shadow:0 10px 30px rgba(0,0,0,0.12);line-height:1.7}
+.intro h2{color:#f97316;margin-bottom:10px}
+
+/* CARDS */
+.grid{margin-top:40px;display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:30px}
+.card{background:white;border-radius:25px;padding:30px;box-shadow:0 15px 35px rgba(0,0,0,0.12);transition:0.35s}
+.card:hover{transform:translateY(-8px) scale(1.02)}
+.card h2{color:#0ea5e9;margin-bottom:10px}
+.btn{display:inline-block;margin-top:15px;padding:10px 18px;border-radius:15px;text-decoration:none;background:linear-gradient(90deg,#34d399,#22d3ee);color:white;font-weight:700}
+
+/* SUBJECT */
+.subject-page{margin-top:80px;background:linear-gradient(160deg,#ecfeff,#cffafe,#fdf4ff);padding:40px;border-radius:30px}
+.subject-page h2{text-align:center;margin-bottom:30px;color:#0ea5e9;font-size:32px}
+.subject-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:25px}
+.subject-card{background:white;padding:25px;border-radius:20px;box-shadow:0 10px 25px rgba(0,0,0,0.1);cursor:pointer;transition:0.3s}
+.subject-card:hover{transform:translateY(-5px)}
+.detail{display:none;margin-top:10px;line-height:1.6;color:#6b7280}
+.subject-card.open .detail{display:block}
+
+/* PROGRESS */
+.progress-section{margin-top:50px;background:white;padding:30px;border-radius:25px;box-shadow:0 10px 30px rgba(0,0,0,0.12)}
+.progress-section h2{color:#22c55e;margin-bottom:20px}
+.progress-item{margin:18px 0}
+.progress-label{display:flex;justify-content:space-between;font-weight:600;margin-bottom:6px}
+.progress-bar{width:100%;height:14px;background:#e5e7eb;border-radius:20px;overflow:hidden}
+.progress-fill{height:100%;border-radius:20px;background:linear-gradient(90deg,#34d399,#22d3ee);width:0%;animation:load 2s forwards}
+.progress-fill.math{width:0%}
+.progress-fill.phys{width:0%}
+.progress-fill.chem{width:0%}
+.progress-fill.eng{width:0%}
+@keyframes load{from{opacity:0.3}to{opacity:1}}
+
+footer{margin-top:50px;text-align:center;color:#6b7280;font-size:14px}
+</style>
+</head>
+<body>
+
+<!-- SIDEBAR -->
+<div class="sidebar">
+<h2>KHÔNG GIAN<br>LUYỆN THI</h2>
+<a href="#gioithieu">Giới thiệu</a>
+<a href="#luyenthi">Vào thi</a>
+<a href="#congdong">Cộng đồng</a>
+<a href="#lienhe">Liên hệ</a>
+</div>
+
+<div class="main">
+
+<!-- BANNER -->
+<section class="banner">
+<h1>Không Gian Luyện Thi Online</h1>
+<p>Chăm luyện mỗi ngày – Vững vàng điểm số</p>
+</section>
+
+<!-- INTRO -->
+<section id="gioithieu" class="intro">
+<h2>Giới thiệu</h2>
+<p><b>Không Gian Luyện Thi</b> là trang web thi thử online dành cho học sinh THPT. Nền tảng được xây dựng với mục tiêu giúp học sinh luyện tập kiến thức một cách chủ động, nhanh chóng và hiệu quả.</p>
+<p>Trang web hoạt động bằng cách cung cấp các bộ đề thi mô phỏng đề kiểm tra thật, hệ thống sẽ tự động chấm điểm ngay sau khi nộp bài.</p>
+<p>Không Gian Luyện Thi giúp học sinh tiết kiệm thời gian ôn tập, tăng khả năng ghi nhớ kiến thức, rèn luyện kỹ năng làm bài trắc nghiệm và tạo động lực học tập thông qua bảng xếp hạng và huy hiệu thành tích. Đây không chỉ là nơi luyện đề mà còn là một môi trường học tập sáng tạo và hiện đại.</p>
+</section>
+
+<!-- CARDS -->
+<section id="luyenthi" class="grid">
+<div class="card">
+<h2>Luyện Thi Tổng Hợp</h2>
+<p>Bộ đề bao quát kiến thức THPT.</p>
+<a class="btn" href="#monhoc">Bắt đầu thi</a>
+</div>
+
+<div id="congdong" class="card">
+<h2>Cộng Đồng Học Tập</h2>
+<p>Nơi học sinh hỗ trợ nhau giải bài, chia sẻ kinh nghiệm ôn thi và cùng tạo động lực học tập mỗi ngày.</p>
+<a class="btn" href="#">Tham gia cộng đồng Discord</a>
+</div>
+</section>
+
+<!-- SUBJECT -->
+<section id="monhoc" class="subject-page">
+<h2>Chọn Môn Luyện Thi</h2>
+<div class="subject-grid">
+
+<div class="subject-card" onclick="togglePair(0)">
+<h3>Toán</h3>
+<div class="detail">
+<p>Đề thi tỉnh Hà Nội</p><p>- đang cập nhật...</p>
+<p>Đề thi tỉnh Nam Định</p><p>- đang cập nhật...</p>
+<p>Đề thi tỉnh Thái Bình</p><p>- đang cập nhật...</p>
+<p>Đề thi tỉnh Thanh Hóa</p><p>- đang cập nhật...</p>
+<p>Đề thi tỉnh Nghệ An</p><p>- đang cập nhật...</p>
+</div>
+</div>
+
+<div class="subject-card" onclick="togglePair(0)">
+<h3>Vật Lí</h3>
+<div class="detail">
+<p>Đề thi tỉnh Hải Phòng</p><p>- đang cập nhật...</p>
+<p>Đề thi tỉnh Quảng Ninh</p><p>- đang cập nhật...</p>
+<p>Đề thi tỉnh Bắc Ninh</p><p>- đang cập nhật...</p>
+<p>Đề thi tỉnh Vĩnh Phúc</p><p>- đang cập nhật...</p>
+<p>Đề thi tỉnh Hà Nam</p><p>- đang cập nhật...</p>
+</div>
+</div>
+
+<div class="subject-card" onclick="togglePair(1)">
+<h3>Hóa Học</h3>
+<div class="detail">
+<p>Đề thi tỉnh Phú Thọ</p><p>- đang cập nhật...</p>
+<p>Đề thi tỉnh Tuyên Quang</p><p>- đang cập nhật...</p>
+<p>Đề thi tỉnh Yên Bái</p><p>- đang cập nhật...</p>
+<p>Đề thi tỉnh Lào Cai</p><p>- đang cập nhật...</p>
+<p>Đề thi tỉnh Sơn La</p><p>- đang cập nhật...</p>
+</div>
+</div>
+
+<div class="subject-card" onclick="togglePair(1)">
+<h3>Tiếng Anh</h3>
+<div class="detail">
+<p>Đề thi tỉnh Bắc Ninh</p>
+<p>- <a href="https://thuyex.github.io/SởBắcNinh.html" target="_blank">Vào thi</a></p>
+
+<p>Đề thi tỉnh Phú Thọ</p>
+<p>- <a href="https://thuyex.github.io/SởPhúThọ.html" target="_blank">Vào thi</a></p>
+
+<p>Đề thi tỉnh Đà Nẵng</p><p>- đang cập nhật...</p>
+<p>Đề thi tỉnh TP.HCM</p><p>- đang cập nhật...</p>
+<p>Đề thi tỉnh Cần Thơ</p><p>- đang cập nhật...</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<!-- PROGRESS -->
+<section class="progress-section">
+<h2>Tiến Độ Học Tập</h2>
+
+<div class="progress-item">
+<div class="progress-label"><span>Toán</span><span id="p-math">0%</span></div>
+<div class="progress-bar"><div class="progress-fill math"></div></div>
+</div>
+
+<div class="progress-item">
+<div class="progress-label"><span>Vật Lí</span><span id="p-phys">0%</span></div>
+<div class="progress-bar"><div class="progress-fill phys"></div></div>
+</div>
+
+<div class="progress-item">
+<div class="progress-label"><span>Hóa Học</span><span id="p-chem">0%</span></div>
+<div class="progress-bar"><div class="progress-fill chem"></div></div>
+</div>
+
+<div class="progress-item">
+<div class="progress-label"><span>Tiếng Anh</span><span id="p-eng">0%</span></div>
+<div class="progress-bar"><div class="progress-fill eng"></div></div>
+</div>
+
+<p style="margin-top:15px;color:#6b7280">✨ Tiến độ sẽ tăng sau khi bạn nộp bài thi.</p>
+</section>
+
+<footer id="lienhe">
+<p>12A1 Mạc Đĩnh Chi</p>
+</footer>
+
+</div>
+
+<script>
+function togglePair(group){
+  const cards = document.querySelectorAll('.subject-card');
+  if(group === 0){
+    cards[0].classList.toggle('open');
+    cards[1].classList.toggle('open');
+  } else {
+    cards[2].classList.toggle('open');
+    cards[3].classList.toggle('open');
+  }
+}
+</script>
+
+</body>
+</html>
