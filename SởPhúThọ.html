@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Thi Thử Tiếng Anh</title>
+<style>
+body{
+  margin:0;
+  font-family:Arial, sans-serif;
+  background:#e6f4ff;
+}
+
+.container{
+  display:flex;
+  height:100vh;
+}
+
+/* SIDEBAR */
+.sidebar{
+  width:200px;
+  background:#cce7ff;
+  padding:15px;
+  box-sizing:border-box;
+}
+.question-list{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:8px;
+}
+.question-list button{
+  padding:8px;
+  border:none;
+  border-radius:6px;
+  cursor:pointer;
+}
+.active{
+  background:#3399ff;
+  color:white;
+}
+
+/* READING */
+.reading{
+  flex:1;
+  padding:20px;
+  overflow-y:auto;
+  background:#f5fbff;
+}
+
+/* QUESTION */
+.question-box{
+  width:350px;
+  background:#d9efff;
+  padding:20px;
+  box-sizing:border-box;
+}
+
+.option{
+  background:white;
+  padding:10px;
+  margin:8px 0;
+  border-radius:8px;
+  cursor:pointer;
+  border:1px solid #cce7ff;
+}
+.option:hover{
+  background:#cce7ff;
+}
+.selected{
+  background:#99ccff;
+}
+
+.submit-btn{
+  margin-top:15px;
+  width:100%;
+  padding:10px;
+  background:#3399ff;
+  color:white;
+  border:none;
+  border-radius:8px;
+  cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<!-- SIDEBAR -->
+<div class="sidebar">
+<h3>Câu</h3>
+<div class="question-list" id="questionList"></div>
+<button class="submit-btn" onclick="submitQuiz()">Nộp</button>
+</div>
+
+<!-- READING -->
+<div class="reading">
+<p><b>
+Read the following piece of news and mark the letter A, B, C or D on your answer sheet 
+to indicate the option that best fits each of the numbered blanks from 1 to 6.
+</b></p>
+
+<h2>VINFAST: VIETNAMESE AUTOMAKER'S GLOBAL AMBITION</h2>
+
+
+
+<p>
+In the competitive automotive industry, VinFast (1) ____________ significant financial resources 
+to develop its electric vehicle technology. The company intended to establish 
+(2) ____________ opportunities and become a leading manufacturer in global markets.
+</p>
+
+<p>
+VinFast has tried to deal (3) ____________ a lack of consumer familiarity with its products. 
+(4) ____________ the company invested heavily in research and development, 
+it still needed to prove its credibility compared to other (5) ____________ in the market.
+</p>
+
+<p>
+VinFast aimed to take (6) ____________ advantage of its technological innovations. 
+However, this required not just partial efforts but a commitment to maximizing every opportunity.
+</p>
+<div class="reading">
+
+
+<hr>
+
+<p><b>
+Read the following announcement and mark the letter A, B, C or D on your answer sheet 
+to indicate the option that best fits each of the numbered blanks from 7 to 12.
+</b></p>
+
+<h2>EMBRACING DIGITAL TRANSFORMATION IN HIGHER EDUCATION</h2>
+
+<p>
+The Global Education Summit 2025, scheduled for November at the National Convention Center, 
+will address the urgent need for pedagogical reforms. The summit will highlight digital platforms 
+(7) ____________ have revolutionized the way students access academic resources. 
+This transition is expected to benefit (8) ____________ universities that are striving to integrate 
+AI-driven tools into their curricula.
+</p>
+
+<p>
+Educators will be encouraged to explore a vast (9) ____________ of instructional strategies, 
+from flipped classrooms to blended learning models. The keynote speech (10) ____________ 
+by Professor Elena Vance will analyze the psychological impacts of remote learning on student engagement.
+</p>
+
+<p>
+This event is a golden opportunity for academics, school administrators, and tech developers 
+to exchange ideas and foster (11) ____________. We strongly advise interested parties 
+to (12) ____________ the workshops in advance to guarantee participation in these high-demand sessions.
+</p>
+<hr>
+
+<p><b>
+Mark the letter A, B, C, or D on your answer sheet to indicate the best arrangement 
+of utterances or sentences to make a meaningful exchange or text 
+in each of the following items from questions 13 to 17.
+</b></p>
+<h3>Question 13</h3>
+<p>
+a. Anna: I just heard APT on Youtube, and it made my day!<br>
+b. Anna: Exactly! Music has such a powerful way of lifting our spirits.<br>
+c. Ben: That’s awesome! I love that song too; it always puts me in a good mood.
+</p>
+<h3>Question 14</h3>
+<p>
+a. Furthermore, the high cost of living in cities often forces people to work longer hours, leading to a poor work-life balance.<br>
+b. In conclusion, while urban areas offer numerous opportunities, the associated social and financial pressures cannot be ignored.<br>
+c. However, this rapid growth brings about significant challenges, such as housing shortages and increased pollution levels.<br>
+d. Urbanization has become a global phenomenon, with more people moving to cities in search of better job prospects and modern amenities.<br>
+e. Consequently, many urban residents struggle to find affordable accommodation near their workplaces, resulting in long daily commutes.
+</p>
+<h3>Question 15</h3>
+<p>
+a. Traditional gatherings such as family dinners and neighborhood events have long provided opportunities for people to strengthen their interpersonal bonds.<br>
+b. However, the widespread adoption of social networking sites has significantly expanded the ways in which individuals can initiate and nurture relationships.<br>
+c. Social interaction patterns have changed dramatically in recent decades as digital communication tools have become ubiquitous worldwide.<br>
+d. This shift has prompted researchers to investigate whether online friendships offer the same psychological benefits as those formed through physical proximity.<br>
+e. Consequently, many experts now suggest maintaining a healthy balance between virtual connections and real-world social engagements for optimal well-being.<br>
+</p><h3>Question 16</h3>
+<p>
+Dear Valued Residents,
+a. Therefore, we kindly request all households to separate their organic waste from recyclable materials starting next Monday.<br>
+b. We are writing to inform you about our new "Green Community" initiative aimed at reducing the neighborhood's carbon footprint.<br>
+c. For further details on the new collection schedule, please refer to the pamphlet attached to this notice.<br>
+d. We believe that through these small collective actions, we can significantly improve the local environment for our children.<br>
+e. In addition, special bins for plastic and glass will be placed at the end of each street to facilitate this process. Yours sincerely,<br>
+The Residents' Committee
+</p>
+<h3>Question 17</h3>
+<p>
+a. Anna: Me too! Did you try the new coffee shop on Main Street?<br>
+b. Anna: I love spending weekends exploring new places.<br>
+c. Ben: Yes, their latte was amazing. We should go there together sometime.<br>
+d. Ben: Absolutely! How about next Saturday?<br>
+e. Anna: That sounds perfect!
+</p>
+
+
+
+<hr>
+
+<p><b>
+Read the following passage and mark the letter A, B, C or D on your answer sheet 
+to indicate the option that best fits each of the numbered blanks from 18 to 22.
+</b></p>
+
+<h2>REGENERATIVE AGRICULTURE AND ECO-SYSTEM RESTORATION</h2>
+
+<p>
+The global movement toward regenerative agriculture is a big change in how we take care of our natural environment. 
+This farming method focuses on enhancing soil health and promoting biodiversity, (18) ____________. 
+When farmers eliminate their reliance on chemical fertilizers, they can help the soil take in more carbon, 
+which is crucial for mitigating the adverse effects of climate change.
+</p>
+
+<p>
+However, starting these greener farming methods is often hard because of money problems. 
+Small farmers, who have to pay high costs and get very little help from the government, (19) ____________ 
+rather than adopting long-term sustainable models.
+</p>
+
+<p>
+(20) ____________. If governments don't give more financial support, 
+the gap between environmental goals and farming reality will continue to widen.
+</p>
+
+<p>
+Furthermore, success in nature restoration depends on a mix of local knowledge, community engagement, 
+and (21) ____________. While some regions have witnessed a great recovery of native flora, 
+others still struggle with land quality. (22) ____________.
+</p>
+
+<hr>
+
+<p><b>
+Read the passage and mark the letter A, B, C or D on your answer sheet 
+to indicate the best answer to each of the following questions from 23 to 30.
+</b></p>
+
+<h2>EARTHQUAKE IN MANDALAY</h2>
+
+<p>
+In the scorching heat of Mandalay, hundreds of patients – from infants to the elderly and Buddhist monks – 
+are lying on hospital beds in an outdoor car park. Three days after a catastrophic earthquake hit Myanmar, 
+the people in the city are very worried and waiting for more shaking.
+</p>
+
+<p>
+Despite having approximately 1,000 beds, Mandalay General Hospital has relocated most patients outside 
+following the devastating earthquake that claimed over 2,000 lives across Myanmar and Thailand...
+</p>
+
+<p>
+With temperatures reaching 39 degrees Celsius, patients found shelter beneath makeshift tarpaulin covers...
+Medical staff are equally affected by the crisis...
+</p>
+
+<hr>
+
+<p><b>
+Read the passage and mark the letter A, B, C or D on your answer sheet 
+to indicate the best answer to each of the following questions from 31 to 40.
+</b></p>
+
+<h2>THE DIGITAL SAT</h2>
+
+<p>
+For decades, the SAT has functioned as a main door to higher education in the United States, 
+shaping admissions outcomes and perceptions of academic potential. Originally conceived to measure ability, 
+the test once symbolized fair opportunity. Yet, in recent years, its fairness and relevance have come under examination...
+</p>
+
+<p>
+The College Board's decision to transition the SAT to a fully digital format marks a significant turning point...
+</p>
+
+<p>
+Equity remains the SAT's most persistent challenge. Critics argue that the exam continues economic and social inequalities...
+</p>
+
+</div>
+
+</div>
+
+<!-- QUESTION -->
+<div class="question-box">
+<h3 id="questionTitle"></h3>
+<div id="options"></div>
+</div>
+
+</div>
+
+<script>
+const questions = [
+
+/* 1–6 */
+{title:"Question 1", options:["A. invested","B. saved","C. borrowed","D. wasted"], answer:0},
+{title:"Question 2", options:["A. much","B. every","C. many","D. little"], answer:2},
+{title:"Question 3", options:["A. in","B. of","C. at","D. with"], answer:3},
+{title:"Question 4", options:["A. While","B. However","C. Although","D. Because"], answer:2},
+{title:"Question 5", options:["A. vehicle makers electric","B. makers vehicle electric","C. electric vehicle makers","D. makers electric vehicle"], answer:2},
+{title:"Question 6", options:["A. complete","B. total","C. full","D. whole"], answer:2},
+
+/* 7–12 */
+{title:"Question 7", options:["A. whom","B. whose","C. who","D. which"], answer:3},
+{title:"Question 8", options:["A. initial","B. superior","C. primary","D. leading"], answer:3},
+{title:"Question 9", options:["A. deal","B. number","C. amount","D. level"], answer:1},
+{title:"Question 10", options:["A. delivering","B. delivers","C. is delivered","D. delivered"], answer:3},
+{title:"Question 11", options:["A. innovatively","B. innovation","C. innovate","D. innovative"], answer:1},
+{title:"Question 12", options:["A. register for","B. account for","C. apply for","D. look for"], answer:0},
+
+/* 13–17 SẮP XẾP */
+{title:"Question 13", options:["A. a – c – b","B. a – b – c","C. b – a – c","D. c – b – a"], answer:0},
+{title:"Question 14", options:["A. d – c – e – a – b","B. d – a – c – e – b","C. c – d – e – a – b","D. d – c – a – e – b"], answer:0},
+{title:"Question 15", options:["A. a – c – b – e – d","B. c – a – b – d – e","C. c – b – a – d – e","D. c – a – d – b – e"], answer:2},
+{title:"Question 16", options:["A. b – e – a – d – c","B. b – a – e – d – c","C. a – b – e – d – c","D. b – a – e – c – d"], answer:0},
+{title:"Question 17", options:["A. b – a – c – d – e","B. a – c – b – e – d","C. b – c – a – e – d","D. a – b – d – c – e"], answer:0},
+
+/* 18–22 */
+{title:"Question 18", options:[
+"A. where these practices are considered essential for agricultural results",
+"B. these methods ensure food output rather than global food security",
+"C. every method improves food output but is not essential for global security",
+"D. all of which are considered essential for global food security"
+], answer:3},
+
+{title:"Question 19", options:[
+"A. traditional habits are frequently maintained by farmers to maximize profits.",
+"B. has frequently kept traditional habits despite environmental concerns",
+"C. frequently maintaining traditional habits to maximize profits for local residents and authority",
+"D. frequently choose to maintain traditional habits despite negative environmental impact"
+], answer:3},
+
+{title:"Question 20", options:[
+"A. Insufficient funding remains a major barrier to achieving system changes",
+"B. Adequate funding still serves as a significant barrier to genuine system changes",
+"C. Minimal funding effectively eliminates every barrier to system changes",
+"D. Abundant funding provides a temporary barrier for agricultural system changes"
+], answer:0},
+
+{title:"Question 21", options:[
+"A. on account of using modern technology to monitor and check the health of ecosystems carefully",
+"B. thanks to applying modern technological solutions for environmental monitoring and resource integration",
+"C. the use of modern technology that can harm traditional farming practices in many ways",
+"D. the integration of modern technology that can enhance monitoring and resource management"
+], answer:3},
+
+{title:"Question 22", options:[
+"A. Indeed, promising outcomes emerge in areas where scientific research is combined with indigenous practices",
+"B. Similarly, negative outcomes always emerge when scientific research ignores indigenous knowledge completely",
+"C. By contrast, promising outcomes emerge where indigenous practices replace scientific research entirely",
+"D. Financial obstacles prevent a wide range of positive outcomes despite scientific research and local efforts, for example"
+], answer:0},
+
+/* 23–30 */
+{title:"Question 23", options:["A. cool","B. boiling","C. freezing","D. mild"], answer:1},
+{title:"Question 24", options:["A","B","C","D"], answer:1},
+{title:"Question 25", options:["A. tarpaulin covers","B. patients","C. family members","D. temperatures"], answer:1},
+{title:"Question 26", options:["A. effortless","B. exhausting","C. tiring","D. demanding"], answer:0},
+{title:"Question 27", options:["A. medical staff","B. critical care patients","C. family members","D. attending physicians"], answer:3},
+{title:"Question 28", options:["A","B","C","D"], answer:3},
+{title:"Question 29", options:["A. Paragraph 1","B. Paragraph 4","C. Paragraph 2","D. Paragraph 3"], answer:1},
+{title:"Question 30", options:["A. Paragraph 3","B. Paragraph 1","C. Paragraph 4","D. Paragraph 2"], answer:0},
+
+/* 31–40 */
+{title:"Question 31", options:["A. tradition","B. education","C. the SAT","D. the demand"], answer:2},
+{title:"Question 32", options:["A","B","C","D"], answer:3},
+{title:"Question 33", options:["A","B","C","D"], answer:2},
+{title:"Question 34", options:["A. stability","B. reorganization","C. removal","D. reduction"], answer:1},
+{title:"Question 35", options:["A","B","C","D"], answer:2},
+{title:"Question 36", options:["A","B","C","D"], answer:3},
+{title:"Question 37", options:["A","B","C","D"], answer:2},
+{title:"Question 38", options:["A","B","C","D"], answer:0},
+{title:"Question 39", options:["A. [I]","B. [IV]","C. [III]","D. [II]"], answer:3},
+{title:"Question 40", options:["A","B","C","D"], answer:2}
+
+];
+
+let current=0;
+let selected={};
+
+function renderList(){
+let list=document.getElementById("questionList");
+list.innerHTML="";
+questions.forEach((q,i)=>{
+let b=document.createElement("button");
+b.innerText=i+1;
+b.onclick=()=>loadQ(i);
+if(i===current)b.classList.add("active");
+list.appendChild(b);
+});
+}
+
+function loadQ(i){
+current=i;
+renderList();
+let q=questions[i];
+document.getElementById("questionTitle").innerText=q.title;
+let opt=document.getElementById("options");
+opt.innerHTML="";
+q.options.forEach((o,idx)=>{
+let d=document.createElement("div");
+d.className="option";
+d.innerText=o;
+if(selected[i]===idx)d.classList.add("selected");
+d.onclick=()=>{
+selected[i]=idx;
+loadQ(i);
+};
+opt.appendChild(d);
+});
+}
+
+function submitQuiz(){
+let s=0;
+questions.forEach((q,i)=>{
+if(selected[i]===q.answer)s++;
+});
+alert("Bạn đúng "+s+"/"+questions.length+" câu");
+}
+
+renderList();
+loadQ(0);
+</script>
+
+
+</body>
+</html>
+
